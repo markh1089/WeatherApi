@@ -1,7 +1,8 @@
 import './App.css';
 import WeekContainer from './components/WeekContainer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-require('dotenv').config()
+
 
 
 function App() {
