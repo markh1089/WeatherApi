@@ -41,12 +41,27 @@ class WeekContainer extends Component {
       ));
     };
 
-    updateLocation = newLocation => {
+    // *Need to work on this to get it based off input fields*updateLocation = newLocation => {
  
-      this.setState({location:newLocation}, this.newFetch)
-      console.log(this.state.location)
+    //   this.setState({location:newLocation}, this.newFetch)
+    //   console.log(this.state.location)      
+    // }
 
-      
+    updateLondon = newLocation => {
+ 
+      this.setState({location:'London'}, this.newFetch)
+    }
+    updateSheffield = newLocation => {
+ 
+      this.setState({location:'Sheffield'}, this.newFetch)
+    }
+    updateLeeds = newLocation => {
+ 
+      this.setState({location:'Leeds'}, this.newFetch)
+    }
+    updateManchester = newLocation => {
+ 
+      this.setState({location:'Manchester'}, this.newFetch)
     }
     
     newFetch = () => {
@@ -70,13 +85,11 @@ class WeekContainer extends Component {
     }
     
 
-
-
   render() {
     return (
       <div className="container">
         <h1 className="weatherTitle"> 5 day Weather forecast</h1>
-        <InputForm location = {this.state.location} updateLocation={this.updateLocation} />
+        <InputForm location = {this.state.location} updateLocation={this.updateLocation} london = {this.updateLondon} leeds={this.updateLeeds} manchester={this.updateManchester} sheffield={this.updateSheffield} />
         <div className="row justify-content-center cards">
           {this.mapWeatherCards()}
         </div>
