@@ -12,7 +12,7 @@ class WeekContainer extends Component {
     location: "Leeds",
   };
 
- 
+  
   componentDidMount = () => {
     
     
@@ -49,6 +49,7 @@ class WeekContainer extends Component {
       <div className="container">
         <h1 className="weatherTitle"> 5 day Weather forecast</h1>
         <InputForm changeLocation = {this.changeLocation}/>
+
         <div className="row justify-content-center cards">
           {this.mapWeatherCards()}
         </div>
