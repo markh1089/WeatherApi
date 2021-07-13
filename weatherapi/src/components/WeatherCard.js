@@ -13,6 +13,7 @@ const WeatherCard = ({ time }) => {
   let date = moment().format('MMMM Do YYYY, h:mm a') 
   let temp = Math.round(time.main.temp)
   let weatherDescription = time.weather[0].description
+  console.log(weatherDescription)
   
 
   return (
